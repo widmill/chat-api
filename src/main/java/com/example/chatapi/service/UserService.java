@@ -42,11 +42,4 @@ public class UserService {
         return user.getId();
     }
 
-    //Метод для тестов
-    public String getUser(Long id) {
-
-        return userRepository.findById(id).get().getUsername();
-    }
-
-
 }

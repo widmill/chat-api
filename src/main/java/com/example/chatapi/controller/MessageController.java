@@ -17,15 +17,15 @@ public class MessageController {
         this.messageService = messageService;
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public Long sendMessage(@RequestBody Message message) {
 
         return messageService.sendMessage(message);
 
     }
 
-    @PostMapping("/get")
-    public List<Message> getMessages(@RequestBody Long chatId) {
+    @GetMapping("/{chatId}")
+    public List<Message> getMessages(@PathVariable Long chatId) {
 
         return messageService.getMessages(chatId);
 

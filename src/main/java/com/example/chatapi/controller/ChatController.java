@@ -17,15 +17,15 @@ public class ChatController {
         this.chatService = chatService;
     }
 
-    @PostMapping("/add")
+    @PostMapping
     public Long createChat(@RequestBody Chat chat) {
 
         return chatService.createChat(chat);
 
     }
 
-    @PostMapping("/get")
-    public List<Chat> getChatsByUserId(@RequestBody Long userId) {
+    @PostMapping("/{userId}")
+    public List<Chat> getChatsByUserId(@PathVariable Long userId) {
 
         return chatService.getChatsByUserId(userId);
 
