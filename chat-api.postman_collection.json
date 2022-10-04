@@ -1,0 +1,150 @@
+{
+	"info": {
+		"_postman_id": "57834985-e60a-40db-85d3-254e684b8185",
+		"name": "chat-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21056224"
+	},
+	"item": [
+		{
+			"name": "CreateNewUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Username\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/add",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create chat with users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chatName\": \"chat_1\",\r\n    \"usersId\": [\r\n      1\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/chats/add",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"chats",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get chats by user id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "6",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/chats/get",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"chats",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chatId\": 1,\r\n    \"userId\": 1,\r\n    \"text\": \"Hello\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/messages/add",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"messages",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get messages by chat id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "1",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/messages/get",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"messages",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
